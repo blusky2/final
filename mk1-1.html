@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK1</title>
+    <link href="main.css" type="text/css" rel="stylesheet">
+</head>
+<script>
+    function act() { 
+        alert("장바구니에 추가하셨습니다.");
+    }
+    function act1() { 
+        
+        var h = document.getElementById("op1");
+        var op=h.options[h.selectedIndex].value;
+        if(op==2){
+            alert("$310000 결제하셨습니다.");
+        }
+        else if(op==1){
+            alert("$320000 결제하셨습니다.");
+        }
+        else{
+            alert("$300000결제하셨습니다.");
+        }       
+    }
+    function ch(){
+        
+        var c = document.getElementById("op1");
+        var op=c.options[c.selectedIndex].value;
+        if(op==2){
+            document.getElementById("rma").innerHTML= "$310000";
+        }
+        else if(op==1){
+            document.getElementById("rma").innerHTML= "$320000";
+        }
+        else{
+            document.getElementById("rma").innerHTML= "$300000";
+        }  
+    }
+    function ch2(){
+        
+       var a= document.getElementById("aa");
+       img.src=e.value;
+        
+    }
+</script>
+<body>
+    <header>
+        <div class="search" >
+        <input type = "text"  placeholder="검색어를 입력해주세요">
+
+        </div>
+        <br>
+        <h3><a href="index.html">SUIT STORE</a></h3>
+      
+    </header>
+
+    <nav>
+    <ul>
+        <li><a href="all.html">전체상품(NEW)</a></li>
+        <li><a href="man.html">남성용슈트</a></li>
+        <li><a href="woman.html">여성용슈트</a></li>
+        <li><a href="etc.html">기타</a></li>
+    </ul>
+    </nav>  
+   <br><br>
+ <table border=1 align="center" cellspacing="0">
+     <tr>
+         <td rowspan = "4">
+            <img src="media/mk1.png" width="400" height="400" alt= "mk1" id= "aa" >
+            <br>
+            <div align="center">
+            <img src="media/MK1-1.jpg" width="40" height="40" alt= "mk1" id= "bb" onmouseover="aa.src='media/MK1-1.jpg'" onmouseout="aa.src='media/mk1.png'">
+            <img src="media/MK1-2.jpg" width="40" height="40" alt= "mk1"  id= "cc" onmouseover="aa.src='media/MK1-2.jpg'" onmouseout="aa.src='media/mk1.png'">
+            <img src="media/MK1-4.jpg" width="40" height="40" alt= "mk1"  id= "dd" onmouseover="aa.src='media/MK1-4.jpg'" onmouseout="aa.src='media/mk1.png'">
+        </div>
+        </td>
+         <td colspan="2">
+            (자체제작)사장님의 첫 작품 빈티지와 하이테크놀로지의 합작품 
+         </td>
+     </tr>
+     <tr>
+        <td>
+            가격
+        </td>
+        <td><span style="text-decoration : line-through">$400000</span> <span>$300000</span></td>
+     </tr>
+     <tr>
+         <td colspan="2">
+             <form>
+                 <select name="op" id="op1" onchange="ch()">
+                    <option value="0" selected>추가옵션</option>
+                    <option value="1">비행기능추가 +$20000</option>
+                    <option value="2">화염방사기추가 +$10000</option>
+                 </select>
+             </form>
+         </td>
+     </tr>
+     <tr>
+         <td colspan="2">
+             <div>
+                 <hr>
+                 택배배송 ｜ 무료배송
+                 <br>
+                 제주추가 $3 제주외 도서지역 추가 $5   
+                 <hr>
+                 총 상품 금액  <span id="rma">$300000</span> 
+
+             </div>
+         <form>
+            <input type="submit" value="구매" style="width: 49%; height:50px;"onclick='act1()' >
+            <input type="submit" value="장바구니"  style="width: 49%; height:50px;"onclick='act()' >
+         </form>
+        </td>
+     </tr>
+ </table>
+ <table align="center">
+    <caption><h3>베스트 상품</h3></caption>
+    <tr>
+        <td>
+    <a href="mk1-1.html"><img src="media/mk1.png" width="200" height="200" alt= "mk1">
+       <br>(자체제작)사장님의 첫 작품 <br><span style="text-decoration : line-through">$400000</span> $300000</a>
+   </td>
+   <td>
+   <a href="mk2-2.html"><img src="media/MK2.jpg" width="200" height="200" alt= "mk2" >
+       <br>(자체제작)사장님의 두번째.. <br><span style="text-decoration : line-through">$700000</span> $6500000</a> 
+   </td> 
+   <td>
+       <a href="mk3.html"><img src="media/MK4.jpg" width="200" height="200" alt= "mk4" >
+           <br>(자체제작)영앤리치가 떠오... <br><span style="text-decoration : line-through">$800000</span> $7500000</a> 
+       </td>
+      <td>
+           <a href="mk5.html"><img src="media/MK5.jpg" width="200" height="200" alt= "mk5" >
+               <br>(자체제작)이제는 들고 다닐수도... <br><span style="text-decoration : line-through">$850000</span> $730000</a> 
+           </td>
+           <td>
+               <a href="mk7.html"><img src="media/MK7.png" width="200" height="200" alt= "mk7" >
+                   <br>(자체제작)부르면 날라오는... <br><span style="text-decoration : line-through">$900000</span> $850000</a> 
+               </td>
+   </tr>
+</table>
+<br><br>
+ <div style= text-align:center>
+ <img src="media/MK1-1.jpg" width="600" height="400" alt= "mk1">
+ <p><b>저희 사장님께서 위급한 상황에서 만든 슈트입니다. 첫 시도라는게 믿기지않을 테크놀로지와 빈티지가 섞인 슈트입니다.
+</b></p>
+<img src="media/MK1-2.jpg" width="600" height="400" alt= "mk1">
+ <p><b>지금 사진은 비행기능 중 촬영한 사진입니다. 단 돈 $20000만 추가하시면 이렇게 비행가능하십니다.
+</b></p>
+<img src="media/MK1-4.jpg" width="600" height="400" alt= "mk1">
+ <p><b>지금 사진은 화염방사기 사용중 촬영한 사진입니다. 단 돈 $10000만 추가하시면 이렇게 비행가능하십니다.
+</b></p>
+</div>
+
+<table border=1 cellspacing="0" align="center">
+    <caption><h3>베스트 리뷰</h3></caption>
+    <tr>
+        <td>
+            <p style=color:red;>★★★★★ <span style=color:black;>5</span></p> 
+            <p>hsc***** -21.05.25. [옵션 비행기능추가]</p>
+            <p>편하고 이뻐서 좋아요 ^^ 엄마도 좋아하세요 ㅎ 덕분에 시원하고 편안한 여름이 될듯해요.</p>
+        </td>
+        <td>
+            <p style=color:red;>★★★★★ <span style=color:black;>5</span></p> 
+            <p>smac***** -21.05.20. [옵션 화염방사기기능추가]</p>
+            <p>화염방사기기능으로 벌레 퇴치하니 정말 좋아요~^^ 덕분에 쾌적한 여름이 될듯해요.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p style=color:red;>★★★<span style=color:black;>☆☆</span> <span style=color:black;>5</span></p> 
+            <p>1104***** -21.05.16. [옵션 비행기능추가]</p>
+            <p>생각보다 많이 무겁네요 입고 다니기만해도 다이어트가능 ㅎㅎ</p>
+        </td>
+        <td>
+            <p style=color:red;>★★★★★ <span style=color:black;>5</span></p> 
+            <p>hscmo** -21.05.26. [옵션 화염방사기기능추가]</p>
+            <p>이걸로 바베큐파티하니 우리아이가 정말 좋아해요~강력추천합니다^^</p>
+        </td>
+    </tr>
+</table>
+
+
+
+   
+
+</body>
+<footer>
+    <div >
+        <img src="media/images.jpg" width="20" height="20" alt= "!" > 반품,환불,교환 등은 불가하오니 잘 생각하시고 구매 부탁드리겠습니다.
+    </div>
+    <div style="background-color: white;">
+        <a href="http://pay.naver.com/provision?viewType=electronic">전자금융거래 이용약관</a>  | <a href="https://business.naver.com/privacy/privacy.html">개인정보처리방침</a>  |  <a href="https://smartstore.naver.com/main/rules/responsibility">책임의 한계와 법적고지</a>  |  <a href="https://policy.naver.com/rules/youthpolicy.html">청소년보호정책</a>  | <a href="https://ips.smartstore.naver.com/main/rules/safety">안전거래가이드</a>
+    </div>
+    <table >
+        <tr>
+            <td>
+                <h2>STARK INDUSTRIES(주)</h2><span class="tab">&#9;</span>
+            </td>
+            <td>고객센터</td><span class="tab">&#9;</span>
+            <td>
+                전자금융거래분쟁처리
+            </td><span class="tab">&#9;</span>
+        </tr>
+        <tr>
+            <td>사업자등록번호 123-45-67890  </td>
+            <td>강원도 춘천시 퇴계로 89 강원전문건설회관</td>
+            <td>전화 1588-3819</td>
+        </tr>
+        <tr>
+            <td>회사주소 10880 Malibu Point, Malibu California 90265</td>
+            <td>
+                전화 1588-3819
+            </td>
+            <td>1:1문의바로가기</td>
+        </tr>
+        
+    </table>
+    
+</footer>
+</html>

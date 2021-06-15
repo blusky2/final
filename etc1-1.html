@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="main.css" type="text/css" rel="stylesheet">
+</head>
+<script>
+    function act() { 
+        alert("장바구니에 추가하셨습니다.");
+    }
+    function act1() { 
+        
+        var h = document.getElementById("op1");
+        var op=h.options[h.selectedIndex].value;
+        if(op==2){
+            alert("$500000 결제하셨습니다.");
+        }
+        else if(op==1){
+            alert("$200000 결제하셨습니다.");
+        }
+        else if(op==3){
+            alert("$650000 결제하셨습니다.");
+        }
+        else if(op==4){
+            alert("$400000 결제하셨습니다.");
+        }
+        else if(op==5){
+            alert("$750000 결제하셨습니다.");
+        }
+        else{
+            alert("물건을 선택해주세요.");
+        }       
+    }
+    function ch(){
+        
+        var c = document.getElementById("op1");
+        var op=c.options[c.selectedIndex].value;
+        if(op==2){
+            document.getElementById("rma").innerHTML= "$500000";
+            aa.src="media/ps.jpg";
+        }
+        else if(op==1){
+            document.getElementById("rma").innerHTML= "$200000";
+            aa.src="media/bs.jpg";
+        }
+        else if(op==3){
+            document.getElementById("rma").innerHTML= "$650000";
+            aa.src="media/bbs.jpg";
+        }
+        else if(op==4){
+            document.getElementById("rma").innerHTML= "$400000";
+            aa.src="media/ls.jpg";
+        }
+        else if(op==5){
+            document.getElementById("rma").innerHTML= "$750000";
+            aa.src="media/sh.jpg";
+        }
+        else{
+            document.getElementById("rma").innerHTML= "$0";
+        }  
+    }
+    function ch2(){
+        
+       var a= document.getElementById("aa");
+       img.src=e.value;
+        
+    }
+</script>
+<body>
+    <header>
+        <div class="search" >
+        <input type = "text"  placeholder="검색어를 입력해주세요">
+
+        </div>
+        <br>
+        <h3><a href="index.html">SUIT STORE</a></h3>
+      
+    </header>
+
+    <nav>
+    <ul>
+        <li><a href="all.html">전체상품(NEW)</a></li>
+        <li><a href="man.html">남성용슈트</a></li>
+        <li><a href="woman.html">여성용슈트</a></li>
+        <li><a href="etc.html">기타</a></li>
+    </ul>
+    </nav>  
+    <br><br>
+ <table border=1 align="center" cellspacing="0">
+     <tr>
+         <td rowspan = "4">
+            <img src="media/ps.jpg" width="400" height="400" alt= "mk49" id= "aa" >
+            <br>
+            <div align="center">
+            <img src="media/ps.jpg" width="40" height="40" alt= "ps"  id= "dd" onmouseover="aa.src='media/ps.jpg'" onmouseout="aa.src='media/ps.jpg'">
+            <img src="media/bs.jpg" width="40" height="40" alt= "bs" id= "bb" onmouseover="aa.src='media/bs.jpg'" onmouseout="aa.src='media/ps.jpg'">
+            <img src="media/bbs.jpg" width="40" height="40" alt= "bbs"  id= "cc" onmouseover="aa.src='media/bbs.jpg'" onmouseout="aa.src='media/ps.jpg'">
+            <img src="media/sh.jpg" width="40" height="40" alt= "sh"  id= "dd" onmouseover="aa.src='media/sh.jpg'" onmouseout="aa.src='media/ps.jpg'">
+            <img src="media/ls.jpg" width="40" height="40" alt= "ls"  id= "ff" onmouseover="aa.src='media/ls.jpg'" onmouseout="aa.src='media/ps.jpg'">
+        </div>
+        </td>
+         <td colspan="2">
+            사장님 주변분들 굿즈(중고도 있음)
+         </td>
+     </tr>
+     <tr>
+        <td>
+            가격
+        </td>
+        <td>$0</td>
+     </tr>
+     <tr>
+         <td colspan="2">
+             <form>
+                 <select name="op" id="op1" onchange="ch()">
+                    <option value="0" selected>선택해주세요</option>
+                    <option value="1">깨진 방패 +$200000</option>
+                    <option value="2">완벽한 방패 +$500000</option>
+                    <option value="3">큰 검 +$6500000</option>
+                    <option value="4">긴 창 +$400000</option>
+                    <option value="5">망치 +$7500000</option>
+                 </select>
+             </form>
+         </td>
+     </tr>
+     <tr>
+         <td colspan="2">
+             <div>
+                 <hr>
+                 택배배송 ｜ 무료배송
+                 <br>
+                 제주추가 $3 제주외 도서지역 추가 $5  &nbsp;&nbsp;&nbsp;&nbsp;
+                 <hr>
+                 총 상품 금액  <span id="rma">$0</span> 
+
+             </div>
+         <form>
+            <input type="submit" value="구매" style="width: 49%; height:50px;"onclick='act1()' >
+            <input type="submit" value="장바구니"  style="width: 49%; height:50px;"onclick='act()' >
+         </form>
+        </td>
+     </tr>
+ </table>
+ <table align="center">
+    <caption><h3>베스트 상품</h3></caption>
+    <tr>
+        <td>
+    <a href="mk1-1.html"><img src="media/mk1.png" width="200" height="200" alt= "mk1">
+       <br>(자체제작)사장님의 첫 작품 <br><span style="text-decoration : line-through">$400000</span> $300000</a>
+   </td>
+   <td>
+   <a href="mk2-2.html"><img src="media/MK2.jpg" width="200" height="200" alt= "mk2" >
+       <br>(자체제작)사장님의 두번째.. <br><span style="text-decoration : line-through">$700000</span> $6500000</a> 
+   </td> 
+   <td>
+       <a href="mk3.html"><img src="media/MK4.jpg" width="200" height="200" alt= "mk4" >
+           <br>(자체제작)영앤리치가 떠오... <br><span style="text-decoration : line-through">$800000</span> $7500000</a> 
+       </td>
+      <td>
+           <a href="mk5.html"><img src="media/MK5.jpg" width="200" height="200" alt= "mk5" >
+               <br>(자체제작)이제는 들고 다닐수도... <br><span style="text-decoration : line-through">$850000</span> $730000</a> 
+           </td>
+           <td>
+               <a href="mk7.html"><img src="media/MK7.png" width="200" height="200" alt= "mk7" >
+                   <br>(자체제작)부르면 날라오는... <br><span style="text-decoration : line-through">$900000</span> $850000</a> 
+               </td>
+   </tr>
+</table>
+
+<br><br>
+ <div style= text-align:center>
+ <img src="media/ps.jpg" width="600" height="400" alt= "ps">
+ <p><b> 사장님 아버지께서 만드시고 사장님 친구분께서 사용했던 방패입니다.
+</b></p>
+<img src="media/bs.jpg" width="600" height="400" alt= "bs">
+ <p><b>사장님 친구분께서 사용하다가 망가졌네요 중고여서 싸게 팝니다.
+</b></p>
+<img src="media/bbs.jpg" width="600" height="400" alt= "bbs">
+ <p><b>위에 방패 깨트릴때 사용했던 검입니다. 상당히 큽니다.
+</b></p>
+<img src="media/sh.jpg" width="600" height="400" alt= "sh">
+ <p><b>사장님의 또 다른 친구가 사용하는 망치입니다. 상당히 무겁습니다.
+</b></p>
+<img src="media/ls.jpg" width="600" height="400" alt= "ls">
+ <p><b>사장님의 또 다른 친구의 동생이 사용했던 창입니다.
+</b></p>
+</div>
+
+<table border=1 cellspacing="0" align="center">
+    <caption><h3>베스트 리뷰</h3></caption>
+    <tr>
+        <td>
+            <p style=color:red;>★★★★★ <span style=color:black;>5</span></p> 
+            <p>vs***** -21.05.25. [옵션 망치]</p>
+            <p>제 친구가 들어본다고 했다가 힘만 뻈네요 그래도 만족합니다~ 나중에 돈까스망치로 사용할려고합니다.</p>
+        </td>
+        <td>
+            <p style=color:red;>★★★★★ <span style=color:black;>5</span></p> 
+            <p>tns***** -21.05.20. [옵션 큰검]</p>
+            <p>고기짜를때 사용할려고 구매했는데 상당히 잘 짤립니다 아주 좋아요.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p style=color:red;>★<span style=color:black;>☆☆☆☆</span> <span style=color:black;>5</span></p> 
+            <p>1104***** -21.05.16. [옵션 깨진방패]</p>
+            <p>깨진거 알고 구매했긴 했지만 너무 심하네요..</p>
+        </td>
+        <td>
+            <p style=color:red;>★★★★★ <span style=color:black;>5</span></p> 
+            <p>hscmo** -21.05.26. [옵션 완벽한 방패 ]</p>
+            <p> 우리아이가 정말 좋아해요~ 강력추천합니다^^</p>
+        </td>
+    </tr>
+</table>
+
+
+
+   
+
+</body>
+<footer>
+    <div >
+        <img src="media/images.jpg" width="20" height="20" alt= "!" > 반품,환불,교환 등은 불가하오니 잘 생각하시고 구매 부탁드리겠습니다.
+    </div>
+    <div style="background-color: white;">
+        <a href="http://pay.naver.com/provision?viewType=electronic">전자금융거래 이용약관</a>  | <a href="https://business.naver.com/privacy/privacy.html">개인정보처리방침</a>  |  <a href="https://smartstore.naver.com/main/rules/responsibility">책임의 한계와 법적고지</a>  |  <a href="https://policy.naver.com/rules/youthpolicy.html">청소년보호정책</a>  | <a href="https://ips.smartstore.naver.com/main/rules/safety">안전거래가이드</a>
+    </div>
+    <table >
+        <tr>
+            <td>
+                <h2>STARK INDUSTRIES(주)</h2><span class="tab">&#9;</span>
+            </td>
+            <td>고객센터</td><span class="tab">&#9;</span>
+            <td>
+                전자금융거래분쟁처리
+            </td><span class="tab">&#9;</span>
+        </tr>
+        <tr>
+            <td>사업자등록번호 123-45-67890  </td>
+            <td>강원도 춘천시 퇴계로 89 강원전문건설회관</td>
+            <td>전화 1588-3819</td>
+        </tr>
+        <tr>
+            <td>회사주소 10880 Malibu Point, Malibu California 90265</td>
+            <td>
+                전화 1588-3819
+            </td>
+            <td>1:1문의바로가기</td>
+        </tr>
+        
+    </table>
+    
+</footer>
+</html>
